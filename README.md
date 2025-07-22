@@ -46,6 +46,8 @@ Once the project is installed:
 ```
 devblog/
 ├── backend/ 
+| ├── models/
+| | ├──User.js # User model
 │ ├── server.js # Main server file
 │ ├── package.json # Backend dependencies
 │ ├── .env.example # Environment variables template
