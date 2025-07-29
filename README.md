@@ -56,6 +56,9 @@ devblog/
 │ ├── .gitignore # Git ignore rules
 ├── frontend/ 
 │ ├── src/
+| | ├──components/
+| | | ├──Login.jsx #Login form
+| | | ├──Register.jsx #Register form
 │ │ ├── App.jsx # Main React component
 │ │ ├── main.jsx # React entry point
 │ │ ├── index.css # Global styles
@@ -81,6 +84,7 @@ devblog/
 **Frontend:**
 - React
 - Vite
+- React Router (Navigation)
 
 
 ## API Endpoints
@@ -90,3 +94,7 @@ devblog/
 - `POST /api/auth/login` - Login user
 
 Both endpoints return JWT token for authentication
+
+## Frontend Routes
+- `/login` - User login form
+- `/register` - User registration form
