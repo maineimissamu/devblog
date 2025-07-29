@@ -1,6 +1,8 @@
+//Imports
 import mongoose from "mongoose";
 import bcrypt from "bcrypt";
 
+//User schema
 const userSchema = new mongoose.Schema({
     email: {
         type: String,

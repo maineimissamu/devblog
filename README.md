@@ -46,6 +46,8 @@ Once the project is installed:
 ```
 devblog/
 ├── backend/ 
+| ├── routes/
+| | ├──auth.js # Login/Register routes
 | ├── models/
 | | ├──User.js # User model
 │ ├── server.js # Main server file
@@ -72,7 +74,19 @@ devblog/
 **Backend:**
 - Express.js
 - Node.js
+- MongoDB (Mongoose)
+- JWT Authentication
+- bcrypt (Password hashing)
 
 **Frontend:**
 - React
 - Vite
+
+
+## API Endpoints
+
+### Authentication
+- `POST /api/auth/register` - Register new user
+- `POST /api/auth/login` - Login user
+
+Both endpoints return JWT token for authentication

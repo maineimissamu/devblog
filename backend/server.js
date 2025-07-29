@@ -1,10 +1,14 @@
+//Imports
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
-import User from "./models/User.js";
+import authRoutes from "./routes/auth.js";
 
+//Environment variables
 dotenv.config();
+
+//Express app
 const app = express();
 const PORT = process.env.PORT || 3002;
 
@@ -22,15 +26,7 @@ mongoose.connect(process.env.MONGODB_URI)
     });
 
 // Routes
-app.post("/api/auth/register", async (req, res) => {
-    try {
-        const { email, password } = req.body;
-        const user = await User.create({ email, password });
-        res.status(201).json(user);
-    } catch (error) {
-        res.status(500).json({ message: "Error registering user" });
-    }
-});
+app.use("/api/auth", authRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
